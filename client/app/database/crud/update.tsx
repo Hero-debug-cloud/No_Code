@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import endpoint from "../../../variables";
 import { BiCopy } from "react-icons/bi";

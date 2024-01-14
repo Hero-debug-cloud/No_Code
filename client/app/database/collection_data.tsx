@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import Schema from "./schema";
 import Data from "./data";

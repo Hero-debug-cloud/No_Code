@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from 'react'
 import { BiCopy } from 'react-icons/bi';
 import { BsCheckCircle } from 'react-icons/bs';

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, ReactNode } from "react";
 import endpoint from "../../variables";
 import axios from "axios";

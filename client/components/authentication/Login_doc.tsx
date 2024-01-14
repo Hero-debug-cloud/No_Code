@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie';
 import { BiCopy } from 'react-icons/bi';

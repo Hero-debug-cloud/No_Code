@@ -2,15 +2,15 @@
 import { useState } from "react";
 import Login from "../components/login/Login";
 import Register from "../components/register/Register";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+
 export default function Home() {
   const [check, setcheck] = useState("register");
   
-
   //changing css of the element;
   const inner = {
     border: "1px solid black",
@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <ChakraProvider>
-      <BrowserRouter>
+      
         {/* if already login then redirect to the main page; */}
         <div className="h-[100vh] flex justify-center items-center bg-[#FEFCFF]">
           <div style={inner}>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </BrowserRouter>
+     
     </ChakraProvider>
   );
 }

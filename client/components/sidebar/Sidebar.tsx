@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-// import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 import { useRouter } from "next/navigation";
 import { useCookies } from "react-cookie";

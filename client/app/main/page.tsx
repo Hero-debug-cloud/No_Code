@@ -1,7 +1,6 @@
 "use client"
 import Sidebar from "../../components/sidebar/Sidebar";
 import React ,{useEffect,useState} from 'react'
-import { BrowserRouter, Router } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Authentication from "../authentication/page";

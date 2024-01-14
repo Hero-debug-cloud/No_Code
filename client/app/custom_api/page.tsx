@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 import Api from "./apis";
-import Documation from "./documation";
+import Documation from "./doc";
 
 const Page = () => {
   const options:any=[<Api key={0}/>,<Documation key={1}/>];

@@ -1,3 +1,4 @@
+"use client"
 import { ChimeSDKMediaPipelines } from "aws-sdk";
 import axios from "axios";
 import { AnyARecord } from "dns";

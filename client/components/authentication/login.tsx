@@ -2,6 +2,7 @@
 import { Spinner, Toast } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+"use client"
 import endpoint from "../../variables";
 import { useCookies } from "react-cookie";
 import { GiCancel } from "react-icons/gi";
