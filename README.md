@@ -3,7 +3,7 @@
 # No Code
 No Code is a Open Source Project which is a BackEnd as a Service (BaaS) platform that significantly simplifies the process of managing databases and building applications. Through its user-friendly interface and powerful capabilities, it allows users to take full control of their projects without the need for extensive coding knowledge. This platform represents a significant advancement in the world of application development, offering accessibility and efficiency to a wide range of users.
 
-[Live](https://no-code-9ybk4p8zf-hero-debug-cloud.vercel.app/)
+[Live](https://master.d3h9ftnmkicd5f.amplifyapp.com/)
 
 # Why No Code ? 
 **1. Intuitive GUI Interface:** <br/><br/>
