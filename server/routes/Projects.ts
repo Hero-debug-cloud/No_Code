@@ -10,66 +10,68 @@ const { checkmodel } = require("../middleware/mongo");
 const { getModel } = require("../middleware/mongo");
 const { deletemodal } = require("../middleware/mongo");
 
-const Project=require("../models/Projects");
+const Project = require("../models/Projects");
 
 router.post(
-  "/delete",
-  authencateToken,
-  async (req: typeof Req, res: typeof Res) => {
-    try {
-      const _id=req.body._id;
-      const result = await Project.deleteOne({_id });
-      return res.status(200).json({ message:result });
-    } catch (err: any) {
-      return res.status(400).json({ message: err });
-    }
-  }
+	"/delete",
+	authencateToken,
+	async (req: typeof Req, res: typeof Res) => {
+		try {
+			const _id = req.body._id;
+			const result = await Project.deleteOne({ _id });
+			return res.status(200).json({ message: result });
+		} catch (err: any) {
+			return res.status(400).json({ message: err });
+		}
+	}
 );
 router.post(
-  "/update",
-  authencateToken,
-  async (req: typeof Req, res: typeof Res) => {
-    try {
-      const _id=req.body._id;
-      const value=req.body.value;
-      const result = await Project.updateOne({ _id },{name:value});
-      return res.status(200).json({ message:result });
-    } catch (err: any) {
-      return res.status(400).json({ message: err });
-    }
-  }
+	"/update",
+	authencateToken,
+	async (req: typeof Req, res: typeof Res) => {
+		try {
+			const _id = req.body._id;
+			const value = req.body.value;
+			const result = await Project.updateOne({ _id }, { name: value });
+			return res.status(200).json({ message: result });
+		} catch (err: any) {
+			return res.status(400).json({ message: err });
+		}
+	}
 );
 router.post(
-  "/read",
-  authencateToken,
-  async (req: typeof Req, res: typeof Res) => {
-    try {
-      const user_id=req.body.user_id;
-      const result=await Project.find({user_id})
-      return res.status(200).json({ message:result });
-    } catch (err: any) {
-      return res.status(400).json({ message: err });
-    }
-  }
+	"/read",
+	authencateToken,
+	async (req: typeof Req, res: typeof Res) => {
+		try {
+			const user_id = req.body.user_id;
+			console.log(user_id);
+			const result = await Project.find({ user_id });
+			console.log("here");
+			console.log(result);
+			return res.status(200).json({ message: result });
+		} catch (err: any) {
+			return res.status(400).json({ message: err });
+		}
+	}
 );
 router.post(
-  "/create",
-  authencateToken,
-  async (req: typeof Req, res: typeof Res) => {
-    try {
-      const name = req.body.name;
-  
-      const newProject=new Project({
-        user_id:req.body.user_id,
-        name
-      })
-      const result=await newProject.save();
-      return res.status(200).json({ message: result });
-    } catch (err: any) {
-      return res.status(400).json({ message: err });
-    }
-  }
-);
+	"/create",
+	authencateToken,
+	async (req: typeof Req, res: typeof Res) => {
+		try {
+			const name = req.body.name;
 
+			const newProject = new Project({
+				user_id: req.body.user_id,
+				name,
+			});
+			const result = await newProject.save();
+			return res.status(200).json({ message: result });
+		} catch (err: any) {
+			return res.status(400).json({ message: err });
+		}
+	}
+);
 
 module.exports = router;
